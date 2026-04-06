@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Water Bottles</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></head>
+<body class="container mt-5">
+    <h2>All Water Bottles</h2>
+    <ul class="list-group mb-3">
+        {% for bottle in bottles %}
+            <a href="{% url 'view_bottle_details' bottle.pk %}" class="list-group-item list-group-item-action">
+                {{ bottle.name }} (Supplier: {{ bottle.supplier.name }})
+            </a>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'view_supplier' %}" class="btn btn-secondary">Back to Suppliers</a>
+</body>
+</html>
