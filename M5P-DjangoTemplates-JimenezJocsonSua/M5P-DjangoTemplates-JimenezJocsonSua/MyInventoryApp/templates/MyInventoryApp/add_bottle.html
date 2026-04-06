@@ -1,0 +1,14 @@
+{% extends 'MyInventoryApp/base.html' %}
+
+{% block content %}
+    <h2>Add a New Water Bottle</h2>
+    <form>
+        <label for="bottle_name">Bottle Name:</label>
+        <input type="text" id="bottle_name" name="bottle_name"><br><br>
+        
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand"><br><br>
+
+        <input type="submit" value="Add Bottle">
+    </form>
+{% endblock %}
