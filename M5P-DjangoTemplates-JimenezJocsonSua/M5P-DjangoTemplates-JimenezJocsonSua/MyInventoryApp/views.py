@@ -102,3 +102,9 @@ def add_bottle(request):
     # If it's a GET request, just show the form with the supplier dropdown
     suppliers = Supplier.objects.all()
     return render(request, 'add_bottle.html', {'suppliers': suppliers})
+
+def delete_bottle(request, pk):
+    # Find the specific bottle and delete it from the database
+    bottle = get_object_or_404(WaterBottle, pk=pk)
+    bottle.delete()
+    return redirect('view_bottles')

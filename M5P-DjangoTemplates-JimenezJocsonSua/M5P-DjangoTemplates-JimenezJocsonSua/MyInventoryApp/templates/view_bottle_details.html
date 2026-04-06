@@ -5,7 +5,7 @@
     <h2>{{ bottle.name }}</h2>
     <p class="lead">Supplier: {{ bottle.supplier.name }}</p>
     <div class="mt-4">
-        <a href="{% url 'view_bottles' %}" class="btn btn-danger m-2" onclick="return confirm('Delete this bottle?');">Delete</a>
+        <a href="{% url 'delete_bottle' bottle.pk %}" class="btn btn-danger m-2" onclick="return confirm('Delete this bottle?');">Delete</a>
         <a href="{% url 'view_bottles' %}" class="btn btn-secondary m-2">Back</a>
     </div>
 </body>
